@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour {
 
         // Jump (Space and left key of mouse)
         if (isActiveAndEnabled &&
-            (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))) {
+            (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))) {
             jumpSound.Play();
             if (isOnGround) {
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
@@ -76,14 +76,14 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)) && !stopJumpping) {
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && !stopJumpping) {
             if (jumpTimeCounter > 0) {
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
                 jumpTimeCounter -= Time.deltaTime;
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0)) {
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) {
             jumpTimeCounter = 0; // Lock user keeping jumping
             stopJumpping = true;
         }
@@ -91,6 +91,9 @@ public class PlayerController : MonoBehaviour {
         if (isOnGround) {
             jumpTimeCounter = jumpTime;
             canDoubleJumping = true;
+            
+            
+            
         }
 
         // Setup animators
