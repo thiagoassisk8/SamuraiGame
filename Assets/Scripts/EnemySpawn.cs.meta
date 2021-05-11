@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - cactusPrefabRef: {fileID: 1659624267625894, guid: 4506af988719a835aa740c108cdc5ad0, type: 3}
+  - cactusPrefabRef: {fileID: 1060333236504586, guid: d0e4270944e2389d4accd6b03c5dc0bb, type: 3}
   - flyingPrefabRef: {fileID: 8400170285351576907, guid: af518487e423ac2cd9aa5acccc6120fa, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

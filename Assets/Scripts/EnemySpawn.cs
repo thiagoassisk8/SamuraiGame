@@ -12,7 +12,7 @@ public class EnemySpawn : MonoBehaviour
 
     public Sprite[] cactusSprites;
 
-    public GameObject cactusPrefabRef;
+    // public GameObject cactusPrefabRef;
     public GameObject flyingPrefabRef;
 
     // SpawnTime cactus;
