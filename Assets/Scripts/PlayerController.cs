@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
 
     // Ground checking properties
     public bool isOnGround;
+    public bool isAttacking;
 
     public LayerMask groundLayer;
 
@@ -25,20 +26,26 @@ public class PlayerController : MonoBehaviour {
     public float groundCheckRadius;
     private bool stopJumpping;
     private bool canDoubleJumping;
+    
 
     private Rigidbody2D myRigidbody;
     private Animator myAnimator;
 
     public GameManager gameManager;
 
-    public AudioSource jumpSound, deathSound;
+    public AudioSource jumpSound, deathSound, attackSound;
 
     // Use this for initialization
     void Start() {
+        
+
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
 
         speedMilestoneCounts = speedIncreaseMilestone;
+        myAnimator.SetBool("Attack1", false);
+        
+        // hurtEnemyOnContact = GetComponent<HurtEnemyOnContact>();
 
         moveSpeedOrigin = moveSpeed;
         speedMilestoneCountsOrigin = speedMilestoneCounts;
@@ -61,6 +68,9 @@ public class PlayerController : MonoBehaviour {
         // Moving right
         myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
 
+                
+
+
         // Jump (Space and left key of mouse)
         if (isActiveAndEnabled &&
             (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))) {
@@ -74,6 +84,15 @@ public class PlayerController : MonoBehaviour {
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
                 stopJumpping = false;
             }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.RightArrow)) {
+            attackSound.Play();
+            // OnClick();
+            isAttacking = true;
+            // StartCoroutine("OnClickFire1Co");
+            // GetComponent<AudioSource>().Play();
+
         }
 
         if ((Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && !stopJumpping) {
@@ -99,6 +118,7 @@ public class PlayerController : MonoBehaviour {
         // Setup animators
         myAnimator.SetFloat("Speed", myRigidbody.velocity.x);
         myAnimator.SetBool("IsOnGround", isOnGround);
+        myAnimator.SetBool("isAttacking", isAttacking);
     }
 
     private void OnCollisionEnter2D(Collision2D other) {

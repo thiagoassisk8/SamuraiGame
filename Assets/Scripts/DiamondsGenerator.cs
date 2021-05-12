@@ -6,6 +6,7 @@ public class DiamondsGenerator : MonoBehaviour {
     public ObjectPooler diamondPooler;
     public float distancesBetweenDiamonds;
 
+    
     public void SpawnDiamonds(Vector3 spawnPosition) {
         GameObject diamond = diamondPooler.GetPoolObject();
         diamond.transform.position = spawnPosition;
