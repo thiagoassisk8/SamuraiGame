@@ -6,11 +6,12 @@ using UnityEngine;
 public class ObjectDestroyer : MonoBehaviour {
     public GameObject[] objectSpawn;
     public GameObject platformDescructionPoint;
-    
+
     
 
     // Use this for initialization
     void Start () {
+        
         platformDescructionPoint = GameObject.Find("PlatformDescructionPoint");        
         InvokeRepeating("Spawn", 5, 5);
         
@@ -19,8 +20,9 @@ public class ObjectDestroyer : MonoBehaviour {
     
     void Spawn(){
         
-        for (int i=0;i<=8;i++){
+        for (int i=0;i<=5;i++){
             Instantiate(objectSpawn[0], transform.position, Quaternion.identity);
+            
         }
         
     }    
