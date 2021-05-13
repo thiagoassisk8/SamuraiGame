@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -801975995
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300002, guid: b0f3285faaf934d188435614a9d7f8b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -131,7 +131,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff95571814ba453da3a5b53415a68d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformDescructionPoint: {fileID: 0}
+  objectSpawn:
+  - {fileID: 8400170285351576907, guid: af518487e423ac2cd9aa5acccc6120fa, type: 3}
+  platformDescructionPoint: {fileID: 1732922093361210}
+  flyingPrefabRef: {fileID: 8400170285351576907, guid: af518487e423ac2cd9aa5acccc6120fa, type: 3}
+  stopSpawn: 0
+  speed: 4
 --- !u!114 &114550538357014058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,4 +154,4 @@ MonoBehaviour:
   powerUpLength: 10
   diamondSprites:
   - {fileID: 21300002, guid: b0f3285faaf934d188435614a9d7f8b3, type: 3}
-  - {fileID: 21300004, guid: b0f3285faaf934d188435614a9d7f8b3, type: 3}
+  - {fileID: 21300000, guid: b0f3285faaf934d188435614a9d7f8b3, type: 3}
