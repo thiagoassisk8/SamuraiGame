@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 114032875876224022}
   - component: {fileID: 2826489750174540648}
   - component: {fileID: 713841923636881805}
+  - component: {fileID: 742506736867524760}
   m_Layer: 10
   m_Name: KiraCogumelo
   m_TagString: KillBox
@@ -124,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff95571814ba453da3a5b53415a68d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectSpawn: []
   platformDescructionPoint: {fileID: 1659624267625894}
 --- !u!120 &2826489750174540648
 LineRenderer:
@@ -242,3 +244,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &742506736867524760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659624267625894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e78b8e2cc48abb1d97543120076e46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpawn:
+  - {fileID: 6784044743761846715, guid: 05dc359b30353f8e9b9ef843cfbb8285, type: 3}
