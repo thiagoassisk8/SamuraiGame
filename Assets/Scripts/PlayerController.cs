@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour {
             }
         }
         
+        //função de ataque
         if (Input.GetKeyDown(KeyCode.RightArrow)) {
             attackSound.Play();
             // OnClick();

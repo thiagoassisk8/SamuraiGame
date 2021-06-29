@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 50399528823953982}
   - component: {fileID: 70083048801106534}
   - component: {fileID: 95486585781134682}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bandit Heavy
   m_TagString: KillBox
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 3234629978573100161, guid: 9e8d9f01c86ac463aa97eeb303f2ece2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -109,15 +109,15 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060333236504586}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_GravityScale: 4
+  m_Material: {fileID: 6200000, guid: 596dd3c74fe8e4b548545fa1db06fb8d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -135,8 +135,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06001377, y: -0.1584878}
-  m_Size: {x: 0.788599, y: 1.9121847}
+  m_Offset: {x: 0.03414162, y: -0.0021981765}
+  m_Size: {x: 0.30926275, y: 0.5796062}
   m_Direction: 0
 --- !u!95 &95486585781134682
 Animator:
@@ -167,7 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4488927891729774}
   - component: {fileID: 61005218204671166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackTrigger
   m_TagString: EnemyWeaponTrigger
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4372097959843994}
   - component: {fileID: 61008228718033798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ObstacleTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
